@@ -5,8 +5,15 @@ namespace azure_app_test.Pages
 {
     public class PrivacyModel : PageModel
     {
+        private readonly ILogger<PrivacyModel> _logger;
+
+        public PrivacyModel(ILogger<PrivacyModel> logger)
+        {
+            _logger = logger;
+        }
         public void OnGet()
         {
+            throw new Exception("Exception from Insides");
         }
     }
 
