@@ -13,7 +13,7 @@ namespace azure_app_test.Pages
         }
         public void OnGet()
         {
-            throw new Exception("Exception from Insides");
+            // throw new Exception("Exception from Insides");
         }
     }
 
