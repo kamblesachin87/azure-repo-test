@@ -1,5 +1,10 @@
 using Azure.Identity;
+using azure_app_test.Data;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+
+var AzureConnectionString = builder.Configuration.GetConnectionString("AzureConnectionString");
+builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(AzureConnectionString));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
